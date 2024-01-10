@@ -23,7 +23,7 @@ router.get("/create" ,ensureAuthenticated, (req,res) => {
 });
 
 // Detail of single story
-router.get('/storyDetail/:id' ,ensureAuthenticated, async(req,res) => {
+router.get('/storyDetail/:id' ,ensureAuthenticated, (req,res) => {
     const id = req.params.id;
     Post.findById(id)
         .populate("userId")
@@ -37,7 +37,7 @@ router.get('/storyDetail/:id' ,ensureAuthenticated, async(req,res) => {
 });
 
 // Portfolio 
-router.get("/portfolio" ,ensureAuthenticated, async(req,res) => {
+router.get("/portfolio" ,ensureAuthenticated, (req,res) => {
     User.findById(req.user)
     .populate("Posts")
     .then(result => {
