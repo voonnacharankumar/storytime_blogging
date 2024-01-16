@@ -58,7 +58,7 @@
                         <% }else{ %>
                             <p class="mb-0">Posted by <strong class="d-inline-block mb-2 text-primary">- <a href="/home/portfolio/<%= story.userId._id  %> " class="link"> <%= story.userId.name  %> </a></strong></p>
                         <% } %>  
-                        <h3 class="mb-0" id="heading"><%= story.name  %> </h3>
+                        <h3 class="mb-0" id="heading"><%= story.title  %> </h3>
                         <div class="mb-2 text-muted" id="date"><%= story.createdAt  %> </div>
                         <p class="card-text mb-auto" id="about"> <%= story.about %>  </p>
                         <a href="/home/storyDetail/<%= story._id  %> " class="stretched-link">Continue reading</a>
