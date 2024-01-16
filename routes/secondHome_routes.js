@@ -70,7 +70,7 @@ router.post("/create"  , ensureAuthenticated, async(req,res) => {
     console.log(req.body);
     console.log(req.user);
     const newPost = new Post({
-        name: req.body.name,
+        title: req.body.title,
         about: req.body.about,
         description: req.body.description,
         userId: req.user,
